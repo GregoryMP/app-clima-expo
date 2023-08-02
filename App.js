@@ -36,7 +36,7 @@ export default function App() {
   useEffect(() => {
     const consultarClima = async () => {
       if (consultar) {
-        const appID = "a462d0210864d25b512b97edaeb19dbe";
+        const appID = process.env.API_KEY;
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appID}`;
         try {
           const respuesta = await fetch(url);
